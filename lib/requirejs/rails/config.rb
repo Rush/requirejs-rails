@@ -89,6 +89,7 @@ module Requirejs
         uglify2
         useStrict
         wrapShim
+        generateSourceMaps
       }
       end
 
