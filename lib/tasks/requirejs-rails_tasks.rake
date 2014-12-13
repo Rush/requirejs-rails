@@ -153,6 +153,7 @@ OS X Homebrew users can use 'brew install node'.
 
         requirejs.manifest[asset_name] = digest_name
         FileUtils.cp built_asset_path, digest_asset_path
+        FileUtils.cp requirejs.config.build_dir.join(asset_name + ".map"), requirejs.config.target_dir.join(asset_name + ".map") if requirejs.config.build_config['generateSourceMaps']
 
         # Create the compressed versions
         File.open("#{built_asset_path}.gz", 'wb') do |f|
